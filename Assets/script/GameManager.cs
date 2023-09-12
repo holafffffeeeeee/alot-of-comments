@@ -5,16 +5,16 @@ using static GameManager;
 
 public class GameManager : MonoBehaviour
 {
-    static GameManager instance;
+    public static GameManager instance;
 
     public int scorePlayer1, scorePlayer2;
     public ScoreScript scoreTextleft, scoreTextright;
-    static PlayMode playMode;
+    public PlayMode playMode;
 
     public enum PlayMode
     {
         PlayerVsPlayer,
-            PlayerVsAI
+        PlayerVsAI
     }
 
     public void OnScoreZoneReached(int id)
@@ -31,9 +31,18 @@ public class GameManager : MonoBehaviour
         scoreTextleft.SetScore(scorePlayer1);
         scoreTextright.SetScore(scorePlayer2);
     }
- /*  public void SwitchPlayerMode(
-      switch (PlayMode)
-       case playMode.PlayerVsPlayer:
-         playMode.PlayervsAI
- */
-}
+   public void SwitchPlayMode()
+    {
+        switch (playMode)
+        {
+            case PlayMode.PlayerVsPlayer:
+                playMode = PlayMode.PlayerVsAI;
+                break;
+            case PlayMode.PlayerVsAI:
+                playMode = PlayMode.PlayerVsPlayer;
+                break;
+        }
+    }  
+     
+
+}   

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameUI : MonoBehaviour
 {
@@ -17,13 +18,14 @@ public class GameUI : MonoBehaviour
     private void AdjustPlayModeButtonText()
     {
 
-            switch (GameManager.instance.playmode) 
+            switch (GameManager.instance.playMode) 
             { 
-            case GameManager.PlayMode PlayerVsPlayer:
+            case GameManager.PlayMode.PlayerVsPlayer:
                 playModeButtonText.text = "2 Players";
             break;
-            case GameManager.PlayMode PlayerVsAi:
-                playModeButtonText.text = "Player Vs AI";
+            
+            case GameManager.PlayMode.PlayerVsAI:
+                playModeButtonText.text = "Player vs AI";
             break;
             }
          
