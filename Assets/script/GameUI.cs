@@ -4,29 +4,28 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-    private void AdjustPlayModebutton;
-
-    public void OnSwitchPlayModeButtonClicked()
-    {
+    public TextMeshProUGUI playModeButtonText;
+    
+        
+        
+        public void OnSwitchPlayModeButtonClicked()
+        {
         GameManager.instance.SwitchPlayMode();
         AdjustPlayModeButtonText();
-    }
-    private void AdjustPlayModeButton
+        }
+
+    private void AdjustPlayModeButtonText()
     {
-     string s = string.Empty;
 
-    switch(GameManager.instance.playmode)
-        {
-        case GameManager.PlayMode PlayerVsPlayer;
-       s = "2 Players";
-        break;
-        case GameManager.PlayMode PlayerVsAi:
-       s = "Player Vs AI";
-      {   break;
+            switch (GameManager.instance.playmode) 
+            { 
+            case GameManager.PlayMode PlayerVsPlayer:
+                playModeButtonText.text = "2 Players";
+            break;
+            case GameManager.PlayMode PlayerVsAi:
+                playModeButtonText.text = "Player Vs AI";
+            break;
+            }
+         
     }
-       
-
 }
-
-
-
