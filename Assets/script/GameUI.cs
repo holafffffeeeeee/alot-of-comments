@@ -6,10 +6,21 @@ using TMPro;
 public class GameUI : MonoBehaviour
 {
     public TextMeshProUGUI playModeButtonText;
-    
-        
-        
-        public void OnSwitchPlayModeButtonClicked()
+    public TextMeshProUGUI menuObject;
+
+    public System.Action onstartgame;
+
+    private void Start()
+    {
+        AdjustPlayModeButtonText();
+    }
+
+    public void OnStartGameButtonClicked()
+    {
+        onStartGame?.Invoke();
+    }
+
+    public void OnSwitchPlayModeButtonClicked()
         {
         GameManager.instance.SwitchPlayMode();
         AdjustPlayModeButtonText();
@@ -17,7 +28,6 @@ public class GameUI : MonoBehaviour
 
     private void AdjustPlayModeButtonText()
     {
-
             switch (GameManager.instance.playMode) 
             { 
             case GameManager.PlayMode.PlayerVsPlayer:

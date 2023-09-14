@@ -10,7 +10,24 @@ public class GameManager : MonoBehaviour
     public int scorePlayer1, scorePlayer2;
     public ScoreScript scoreTextleft, scoreTextright;
     public PlayMode playMode;
+    public GameUI gameUI;
 
+    private void Awake()
+    {
+        if(instance)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance= this;
+            gameUI.onStartGame += OnStartGame;
+        }
+    }
+    private void OnDestroy()
+    {
+        gameUI.onstartgame -= OnStartGame;
+    }
     public enum PlayMode
     {
         PlayerVsPlayer,
@@ -24,7 +41,14 @@ public class GameManager : MonoBehaviour
 
         if (id == 2)
             scorePlayer2++;
-        UpdateScores();
+       gameUI.UpdateScores(scorePlayer1, scorePlayer2);
+    }
+    private void OnStartGame()
+    {
+        scorePlayer1;
+        scorePlayer2;
+        gameUI.UpdateScores(scorePlayer1, scorePlayer2);
+
     }
     private void UpdateScores()
     {
@@ -32,7 +56,8 @@ public class GameManager : MonoBehaviour
         scoreTextright.SetScore(scorePlayer2);
     }
    public void SwitchPlayMode()
-    {
+   {
+        Debug.Log("Switch");
         switch (playMode)
         {
             case PlayMode.PlayerVsPlayer:
