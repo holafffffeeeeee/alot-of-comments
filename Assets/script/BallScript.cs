@@ -8,7 +8,7 @@ public class BallScript : MonoBehaviour
     public GameManager gameManager;
     public Rigidbody2D rb2d;
     public float maxInitialAngle = 0.67f;
-    public float moveSpeed = 1f;
+    public float moveSpeed = 50f;
     public float maxStartY = 4f;
     private float startX = 0f;
 
@@ -16,6 +16,7 @@ public class BallScript : MonoBehaviour
     {
         GameManager.instance.onReset += ResetBall;
        GameManager.instance.gameUI.onStartGame += ResetBall;
+        Debug.Log("hello");
     }
     private void ResetBall()
     {

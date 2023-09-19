@@ -980,6 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557053548}
   - component: {fileID: 1557053547}
+  - component: {fileID: 1557053549}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -999,10 +1000,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01455a9c9fb47f445b4e328d72d43c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1557053547}
   scorePlayer1: 0
   scorePlayer2: 0
   scoreTextleft: {fileID: 1046954409}
   scoreTextright: {fileID: 568092880}
+  playMode: 0
+  gameUI: {fileID: 1557053549}
+  ballScript: {fileID: 1840117938}
 --- !u!4 &1557053548
 Transform:
   m_ObjectHideFlags: 0
@@ -1018,6 +1023,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557053549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557053546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865ab1f031435ab40b67c2f157463d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playModeButtonText: {fileID: 0}
+  menuObject: {fileID: 0}
 --- !u!50 &1576053459 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1753108008954985794, guid: 64b6e2b8af0d8694a9b0befa0e01c45e, type: 3}

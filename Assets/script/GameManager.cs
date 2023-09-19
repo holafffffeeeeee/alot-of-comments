@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public PlayMode playMode;
     public GameUI gameUI;
     public System.Action onReset;
-    public BallScript ball;
+    public BallScript ballScript;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            instance= this;
+            instance = this;
             gameUI.onStartGame += OnStartGame;
         }
     }

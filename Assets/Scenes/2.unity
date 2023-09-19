@@ -1328,11 +1328,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01455a9c9fb47f445b4e328d72d43c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1915648989}
   scorePlayer1: 0
   scorePlayer2: 0
   scoreTextleft: {fileID: 0}
   scoreTextright: {fileID: 0}
   playMode: 0
+  gameUI: {fileID: 1765128789}
+  ballScript: {fileID: 0}
 --- !u!4 &1915648990
 Transform:
   m_ObjectHideFlags: 0
