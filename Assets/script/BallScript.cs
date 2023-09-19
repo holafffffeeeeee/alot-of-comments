@@ -10,11 +10,16 @@ public class BallScript : MonoBehaviour
     public float maxInitialAngle = 0.67f;
     public float moveSpeed = 1f;
     public float maxStartY = 4f;
-    
     private float startX = 0f;
 
-    private void Start()
+   public void Start()
     {
+        GameManager.instance.onReset += ResetBall;
+       GameManager.instance.gameUI.onStartGame += ResetBall;
+    }
+    private void ResetBall()
+    {
+        ResetBallPosition();
         InitialPush();
     }
     private void InitialPush()
@@ -27,7 +32,7 @@ public class BallScript : MonoBehaviour
         dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
         rb2d.velocity = dir * moveSpeed;
     }
-    private void ResetBall()
+    private void ResetBallPosition()
         {
         float posY = Random.Range(-maxStartY, maxStartY);
         Vector2 position = new Vector2(startX, posY);
@@ -38,7 +43,7 @@ public class BallScript : MonoBehaviour
         ScoreZone ScoreZone2 = collision.GetComponent<ScoreZone>();
         if (ScoreZone2) 
         {
-            gameManager.OnScoreZoneReached(ScoreZone2.id);
+            GameManager.instance.OnScoreZoneReached(ScoreZone2.id);
            ResetBall();
             InitialPush();
         }

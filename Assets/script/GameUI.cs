@@ -8,7 +8,7 @@ public class GameUI : MonoBehaviour
     public TextMeshProUGUI playModeButtonText;
     public TextMeshProUGUI menuObject;
 
-    public System.Action onstartgame;
+    public System.Action onStartGame;
 
     private void Start()
     {
