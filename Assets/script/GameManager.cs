@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             scorePlayer2++;
        UpdateScores(scorePlayer1, scorePlayer2);
     }
-    private void OnStartGame()
+    public void OnStartGame()
     {
         scorePlayer1 = 0;
         scorePlayer2 = 0;
@@ -73,7 +73,10 @@ public class GameManager : MonoBehaviour
                 playMode = PlayMode.PlayerVsPlayer;
                 break;
         }
-    }  
-     
+    }
+    public bool IsPlayer2Ai()
+    {
+        return playMode == PlayMode.PlayerVsAi || playMode == PlayMode.AiVsAi;
+    }
 
 }   

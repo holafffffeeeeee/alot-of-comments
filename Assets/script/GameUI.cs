@@ -5,7 +5,7 @@ using TMPro;
 
 public class GameUI : MonoBehaviour
 {
-    GameUI gameUI;
+    
     public TextMeshProUGUI playModeButtonText;
     public TextMeshProUGUI menuObject;
 
