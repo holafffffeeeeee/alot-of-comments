@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public PlayMode playMode;
     public GameUI gameUI;
     public System.Action onReset;
-    public BallScript ballScript;
+    public BallScript ball;
 
     private void Awake()
     {
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
     }
     public bool IsPlayer2Ai()
     {
-        return playMode == PlayMode.PlayerVsAi || playMode == PlayMode.AiVsAi;
+        return playMode == PlayMode.PlayerVsAI;
     }
-
+   
 }   

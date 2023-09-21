@@ -17,7 +17,7 @@ public class BallScript : MonoBehaviour
         InitialPush();
         GameManager.instance.onReset += ResetBall;
         GameManager.instance.gameUI.onStartGame += ResetBall;
-        Debug.Log("hello");
+       
     }
     /*public void Start()
     {
@@ -32,9 +32,9 @@ public class BallScript : MonoBehaviour
         if (Random.value < 0.5f)
                 dir = Vector2.right;
 
-        dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
+        //dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
         rb2d.velocity = dir * moveSpeed;
-        Debug.Log(dir * moveSpeed);
+        
     }
     private void ResetBall()
         {
