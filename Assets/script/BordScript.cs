@@ -7,8 +7,7 @@ public class BordScript : MonoBehaviour
 {
     public Rigidbody2D rb2d;
     public float id;
-    public float moveSpeed = 1.0f;
-    public float moveSpeedMultiplier = 5f;
+    public float moveSpeed = 5.0f;
     public Transform ballPos;
 
     private void Update()
@@ -67,7 +66,7 @@ public class BordScript : MonoBehaviour
    private void Move(float movement)
     {
         Vector2 valo = rb2d.velocity;
-        valo.y = moveSpeed * moveSpeedMultiplier * movement;
+        valo.y = moveSpeed * movement;
         rb2d.velocity = valo;
     }
 }

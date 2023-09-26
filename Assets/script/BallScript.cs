@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class BallScript : MonoBehaviour
 {
@@ -11,13 +12,14 @@ public class BallScript : MonoBehaviour
     public float moveSpeed = 10f;
     public float maxStartY = 4f;
     private float startX = 0f;
+    private float speedMultiplier = 1.1f;
 
-   public void Start()
+    public void Start()
     {
         InitialPush();
         GameManager.instance.onReset += ResetBall;
         GameManager.instance.gameUI.onStartGame += ResetBall;
-       
+
     }
     /*public void Start()
     {
@@ -30,26 +32,38 @@ public class BallScript : MonoBehaviour
         Vector2 dir = Vector2.left;
 
         if (Random.value < 0.5f)
-                dir = Vector2.right;
+            dir = Vector2.right;
 
-        //dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
+        dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
         rb2d.velocity = dir * moveSpeed;
-        
+
     }
     private void ResetBall()
-        {
+    {
         float posY = Random.Range(-maxStartY, maxStartY);
         Vector2 position = new Vector2(startX, posY);
         transform.position = position;
     }
-    private void OnTriggerEnter2D(Collider2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         ScoreZone ScoreZone2 = collision.GetComponent<ScoreZone>();
-        if (ScoreZone2) 
+        if (ScoreZone2)
         {
             GameManager.instance.OnScoreZoneReached(ScoreZone2.id);
-           ResetBall();
+            ResetBall();
             InitialPush();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        BordScript bord = collision.collider.GetComponent<BordScript>();
+        if (bord)
+        {
+            rb2d.velocity *= speedMultiplier;
+
+            //AdjustAngle(paddle, collision);
+
         }
     }
 }
