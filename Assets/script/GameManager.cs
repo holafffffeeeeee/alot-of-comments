@@ -6,7 +6,7 @@ using static GameManager;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-   
+
     public GameManager gameManager;
     public int scorePlayer1, scorePlayer2;
     public ScoreScript scoreTextleft, scoreTextright;
@@ -14,10 +14,16 @@ public class GameManager : MonoBehaviour
     public GameUI gameUI;
     public System.Action onReset;
     public BallScript ball;
+    public BackGroundOnOff backgroundOnOff;
+
+    public GameObject backGroundImage;
+
+
+
 
     private void Awake()
     {
-        if(instance)
+        if (instance)
         {
             Destroy(gameObject);
         }
@@ -36,10 +42,15 @@ public class GameManager : MonoBehaviour
         PlayerVsPlayer,
         PlayerVsAI
     }
+    public enum BackGroundOnOff
+    {
+        BackGroundOn,
+        BackGroundOff
+    }
 
     public void OnScoreZoneReached(int id)
     {
-            onReset?.Invoke();
+        onReset?.Invoke();
 
 
         if (id == 1)
@@ -47,13 +58,13 @@ public class GameManager : MonoBehaviour
 
         if (id == 2)
             scorePlayer2++;
-       UpdateScores(scorePlayer1, scorePlayer2);
+        UpdateScores(scorePlayer1, scorePlayer2);
     }
     public void OnStartGame()
     {
         scorePlayer1 = 0;
         scorePlayer2 = 0;
-       UpdateScores(scorePlayer1, scorePlayer2);
+        UpdateScores(scorePlayer1, scorePlayer2);
 
     }
     private void UpdateScores(int player1, int player2)
@@ -61,8 +72,8 @@ public class GameManager : MonoBehaviour
         scoreTextleft.SetScore(scorePlayer1);
         scoreTextright.SetScore(scorePlayer2);
     }
-   public void SwitchPlayMode()
-   {
+    public void SwitchPlayMode()
+    {
         Debug.Log("Switch");
         switch (playMode)
         {
@@ -78,5 +89,19 @@ public class GameManager : MonoBehaviour
     {
         return playMode == PlayMode.PlayerVsAI;
     }
-   
+    public void BackgroundOnOff()
+    {
+        Debug.Log("Switch");
+        switch (backgroundOnOff)
+        {
+            case BackGroundOnOff.BackGroundOn:
+                backgroundOnOff = BackGroundOnOff.BackGroundOff;
+                break;
+            case BackGroundOnOff.BackGroundOff:
+                backgroundOnOff = BackGroundOnOff.BackGroundOn;
+                break;
+        }
+
+    }
+
 }   

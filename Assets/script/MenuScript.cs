@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
+    public GameManager gameManager;
     public GameObject Canvas;
     public GameObject Back;
+    public GameObject backgroundnyan;
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -17,6 +19,7 @@ public class MenuScript : MonoBehaviour
         {
             Canvas.SetActive(false);
             Back.SetActive(true);
+            backgroundnyan.SetActive(true);
         }
 
         /*if(Back)
@@ -28,17 +31,7 @@ public class MenuScript : MonoBehaviour
     {
         Canvas.SetActive(true);
         Back.SetActive(false);
+        backgroundnyan.SetActive(false);
     }
-    public void ello()
-    {
-        if (Application.isPlaying)
-        {
-            
-
-        }
-    }
-    public void oof()
-    {
-        
-    }
+   
 }      

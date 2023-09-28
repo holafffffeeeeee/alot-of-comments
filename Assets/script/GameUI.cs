@@ -5,7 +5,7 @@ using TMPro;
 
 public class GameUI : MonoBehaviour
 {
-    
+    public TextMeshProUGUI volumeValueText;
     public TextMeshProUGUI playModeButtonText;
     public TextMeshProUGUI menuObject;
 
@@ -40,5 +40,9 @@ public class GameUI : MonoBehaviour
             break;
             }
          
+    }
+    public void OnVolumeChanged(float value)
+    {
+        volumeValueText.text = $"{Mathf.RoundToInt(value * 100)} %";
     }
 }
