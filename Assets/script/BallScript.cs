@@ -13,7 +13,6 @@ public class BallScript : MonoBehaviour
     public float maxStartY = 4f;
     private float startX = 0f;
     private float speedMultiplier = 1.1f;
-    public Vector2 savedVelocity;
 
     public void Start()
     {
@@ -37,11 +36,10 @@ public class BallScript : MonoBehaviour
 
         dir.y = Random.Range(-maxInitialAngle, maxInitialAngle);
         rb2d.velocity = dir * moveSpeed;
-        savedVelocity = rb2d.velocity;
+
     }
     private void ResetBall()
     {
-        rb2d.velocity = savedVelocity;
         float posY = Random.Range(-maxStartY, maxStartY);
         Vector2 position = new Vector2(startX, posY);
         transform.position = position;

@@ -10,26 +10,18 @@ public class backgroundmanager : MonoBehaviour
 
     public void Start()
     {
-        if (GameManager.instance.backgroundOnOff == GameManager.BackGroundOnOff.BackGroundOn)
-        {
+        if (gameManager.backgroundOnOff == GameManager.BackGroundOnOff.BackGroundOn)
             background.SetActive(true);
-            Debug.Log("true");
-        }
-        else
-        {
-            background.SetActive(false);
-            Debug.Log("false");
-        }
+
     }
     public void BackGroundOnOffClicked()
     {
         GameManager.instance.BackgroundOnOff();
-       
+
 
     }
-    public void ImageOnOrOf()
+    private void ImageOnOrOf()
     {
-        Debug.Log("on nof");
         switch (GameManager.instance.backgroundOnOff)
         {
             case GameManager.BackGroundOnOff.BackGroundOn:
@@ -37,7 +29,7 @@ public class backgroundmanager : MonoBehaviour
                 break;
 
             case GameManager.BackGroundOnOff.BackGroundOff:
-                GameManager.instance.backgroundOnOff = GameManager.BackGroundOnOff.BackGroundOn;
+                GameManager.BackGroundOnOff.BackGroundOff = GameManager.instance.backgroundOnOff;
                 break;
         }
 

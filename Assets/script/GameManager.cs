@@ -25,12 +25,10 @@ public class GameManager : MonoBehaviour
     {
         if (instance)
         {
-
             Destroy(gameObject);
         }
         else
         {
-            DontDestroyOnLoad(gameObject);
             instance = this;
             gameUI.onStartGame += OnStartGame;
         }
@@ -52,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     public void OnScoreZoneReached(int id)
     {
-       
+        onReset?.Invoke();
 
 
         if (id == 1)
@@ -71,7 +69,6 @@ public class GameManager : MonoBehaviour
     }
     private void UpdateScores(int player1, int player2)
     {
-        Debug.Log("update");
         scoreTextleft.SetScore(scorePlayer1);
         scoreTextright.SetScore(scorePlayer2);
     }
