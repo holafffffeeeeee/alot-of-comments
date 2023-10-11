@@ -246,7 +246,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1915648992}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
@@ -2480,9 +2480,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1915648992}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Settings
+      - m_Target: {fileID: 1915648989}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BackgroundOnOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3117,7 +3117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1915648989}
   Canvas: {fileID: 1917484223}
-  Back: {fileID: 361568164}
+  Back: {fileID: 202858071}
   backgroundnyan: {fileID: 285276448}
 --- !u!1 &1917484223
 GameObject:

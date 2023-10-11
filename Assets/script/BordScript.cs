@@ -9,6 +9,7 @@ public class BordScript : MonoBehaviour
     public float id;
     public float moveSpeed = 5.0f;
     public Transform ballPos;
+    public GameManager gameManager;
 
     private void Update()
     {
