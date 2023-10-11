@@ -246,7 +246,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1917484228}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1917484228}
+      - m_Target: {fileID: 1915648992}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: Settings
         m_Mode: 1
@@ -3066,13 +3066,13 @@ MonoBehaviour:
   gameManager: {fileID: 1915648989}
   scorePlayer1: 0
   scorePlayer2: 0
-  scoreTextleft: {fileID: 0}
-  scoreTextright: {fileID: 0}
+  scoreTextleft: {fileID: 4702378788495647951, guid: a3c635f0af3f09045be94a6d01a580e7, type: 3}
+  scoreTextright: {fileID: 1733994577171831739, guid: 2942299e87fbad94eaf87471bb32b9c7, type: 3}
   playMode: 0
   gameUI: {fileID: 1765128789}
   ball: {fileID: 0}
   backgroundOnOff: 0
-  backGround: {fileID: 0}
+  backGroundImage: {fileID: 674193662629808310, guid: ff197eb9840911541a5b65572d96766c, type: 3}
 --- !u!4 &1915648990
 Transform:
   m_ObjectHideFlags: 0
@@ -3116,8 +3116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1915648989}
-  Canvas: {fileID: 0}
-  Back: {fileID: 0}
+  Canvas: {fileID: 1917484223}
+  Back: {fileID: 361568164}
   backgroundnyan: {fileID: 285276448}
 --- !u!1 &1917484223
 GameObject:
@@ -3131,7 +3131,6 @@ GameObject:
   - component: {fileID: 1917484226}
   - component: {fileID: 1917484225}
   - component: {fileID: 1917484224}
-  - component: {fileID: 1917484228}
   - component: {fileID: 1917484229}
   - component: {fileID: 1917484230}
   m_Layer: 5
@@ -3227,22 +3226,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1917484228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917484223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d215485995600244bfaf4226b01a8a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  Canvas: {fileID: 1917484223}
-  Back: {fileID: 202858071}
-  backgroundnyan: {fileID: 0}
 --- !u!114 &1917484229
 MonoBehaviour:
   m_ObjectHideFlags: 0

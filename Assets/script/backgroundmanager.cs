@@ -29,7 +29,7 @@ public class backgroundmanager : MonoBehaviour
                 break;
 
             case GameManager.BackGroundOnOff.BackGroundOff:
-                GameManager.BackGroundOnOff.BackGroundOff = GameManager.instance.backgroundOnOff;
+                GameManager.instance.backgroundOnOff = GameManager.BackGroundOnOff.BackGroundOn;
                 break;
         }
 

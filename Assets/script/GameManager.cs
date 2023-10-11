@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            DontDestroyOnLoad(gameObject);
             instance = this;
             gameUI.onStartGame += OnStartGame;
         }
