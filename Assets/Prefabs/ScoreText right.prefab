@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 185377514893298807}
+  gameManager: {fileID: 0}
 --- !u!114 &185377514893298807
 MonoBehaviour:
   m_ObjectHideFlags: 0

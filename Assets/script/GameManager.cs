@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     public System.Action onReset;
     public BallScript ball;
     public BackGroundOnOff backgroundOnOff;
-
     public GameObject backGroundImage;
 
 
@@ -29,7 +28,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(scoreTextleft);
+            DontDestroyOnLoad(scoreTextright);
+           
+
             instance = this;
             gameUI.onStartGame += OnStartGame;
         }
@@ -105,4 +107,4 @@ public class GameManager : MonoBehaviour
 
     }
 
-}   
+}

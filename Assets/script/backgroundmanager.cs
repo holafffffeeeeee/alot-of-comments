@@ -20,7 +20,7 @@ public class backgroundmanager : MonoBehaviour
 
 
     }
-    private void ImageOnOrOf()
+    public void ImageOnOrOf()
     {
         switch (GameManager.instance.backgroundOnOff)
         {

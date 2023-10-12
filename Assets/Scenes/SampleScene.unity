@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!50 &418541994 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8473927987181466695, guid: a8a539c8136807947b518694ce322f04, type: 3}
@@ -1576,7 +1577,7 @@ PrefabInstance:
       objectReference: {fileID: 1840117934}
     - target: {fileID: 4743623407238548055, guid: 64b6e2b8af0d8694a9b0befa0e01c45e, type: 3}
       propertyPath: moveSpeed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4743623407238548055, guid: 64b6e2b8af0d8694a9b0befa0e01c45e, type: 3}
       propertyPath: gameManager
