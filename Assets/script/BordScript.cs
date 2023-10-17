@@ -14,7 +14,7 @@ public class BordScript : MonoBehaviour
 
     private void Update()
     {
-        if(id == 2 && GameManager.instance.IsPlayer2Ai())
+        if(id == 3 && GameManager.instance.IsPlayer2Ai())
         {
             MoveAI();
         }
@@ -25,12 +25,12 @@ public class BordScript : MonoBehaviour
         }
         
     }
-    private bool IsAi()
+   /* private bool IsAi()
     {
 
         bool isPlayer2Ai = !bord1() && GameManager.instance.IsPlayer2Ai();
         return  isPlayer2Ai;
-    }
+    }*/
     private void MoveAI()
     {
       
@@ -39,10 +39,10 @@ public class BordScript : MonoBehaviour
         Move(direction);
         ;
     }
-    private float GetInput()
+   /* private float GetInput()
     {
         return isPlayer2Ai() ? Input.GetAxis(MovePlayer1InputName) : Input.GetAxis(MovePlayer2InputName);
-    }
+    }*/
 
 
     private float ProcessInput()
@@ -63,7 +63,7 @@ public class BordScript : MonoBehaviour
                 //Debug.Log("normed   "+ballPos.position.normalized.y);
 
                 //movement = ballPos.position.normalized.y;
-
+              
                 break;
 
                 

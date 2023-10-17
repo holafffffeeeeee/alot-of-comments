@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using static GameManager;
 
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     public BallScript ball;
     public BackGroundOnOff backgroundOnOff;
     public GameObject backGroundImage;
-
+    public float id;
 
 
 
@@ -88,6 +89,11 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+   /* public PlayMode Confirmplaymode(float id)
+    {
+        if (id == 3 );
+        PlayMode playerVsAI = PlayMode.PlayerVsAI;
+    }*/
     public bool IsPlayer2Ai()
     {
         return playMode == PlayMode.PlayerVsAI;

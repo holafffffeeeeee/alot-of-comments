@@ -55,6 +55,11 @@ public class BallScript : MonoBehaviour
         }
     }
 
+   /* private void OnTriggerEnter2D(Collider2D collision)
+    {
+       PowerupScript powerup = collision.GetComponent<PowerupScript>();
+        if ()
+    }*/
     private void OnCollisionEnter2D(Collision2D collision)
     {
         BordScript bord = collision.collider.GetComponent<BordScript>();
