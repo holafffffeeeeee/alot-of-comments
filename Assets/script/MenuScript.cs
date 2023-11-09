@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour
     public GameObject Back;
     public GameObject backgroundnyan;
     public GameObject Back2;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
