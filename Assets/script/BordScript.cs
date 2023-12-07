@@ -14,29 +14,24 @@ public class BordScript : MonoBehaviour
 
     public void Update()
     {
-        float movement = ProcessInput();
-        Move(movement);
+        if(id == 3 && GameManager.instance.IsPlayer2Ai())
+        {
+            MoveAI();
+        }
+        else
+        {
+            float movement = ProcessInput();
+            Move(movement);
+        }
+        
     }
-    /* private void Update()
-     {
-         if(id == 3 && GameManager.instance.IsPlayer2Ai())
-         {
-             MoveAI();
-         }
-         else
-         {
-             float movement = ProcessInput();
-             Move(movement);
-         }*/
-
-
    /* private bool IsAi()
     {
 
         bool isPlayer2Ai = !bord1() && GameManager.instance.IsPlayer2Ai();
         return  isPlayer2Ai;
     }*/
- /*   private void MoveAI()
+    private void MoveAI()
     {
       
         Vector2 ballpos = ballPos.position; //GameManager.instance.ball.transform.position;
