@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
         {
             DontDestroyOnLoad(scoreTextleft);
             DontDestroyOnLoad(scoreTextright);
-           
-
             instance = this;
             gameUI.onStartGame += OnStartGame;
         }
