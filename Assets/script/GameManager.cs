@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -18,8 +19,7 @@ public class GameManager : MonoBehaviour
     public BackGroundOnOff backgroundOnOff;
     public GameObject backGroundImage;
     public float id;
-
-
+    
 
     private void Awake()
     {
@@ -31,10 +31,15 @@ public class GameManager : MonoBehaviour
         {
             DontDestroyOnLoad(scoreTextleft);
             DontDestroyOnLoad(scoreTextright);
+           
+           
             instance = this;
             gameUI.onStartGame += OnStartGame;
         }
     }
+
+ 
+
     private void OnDestroy()
     {
         gameUI.onStartGame -= OnStartGame;
