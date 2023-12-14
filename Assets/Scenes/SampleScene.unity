@@ -234,6 +234,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &312658501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8473927987181466699, guid: a8a539c8136807947b518694ce322f04, type: 3}
+  m_PrefabInstance: {fileID: 8473927987325257197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &314544946
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,11 +355,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+--- !u!1 &394287595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1753108008954985822, guid: 64b6e2b8af0d8694a9b0befa0e01c45e, type: 3}
+  m_PrefabInstance: {fileID: 1753108009570523025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &418541994 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8473927987181466695, guid: a8a539c8136807947b518694ce322f04, type: 3}
   m_PrefabInstance: {fileID: 8473927987325257197}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &418541995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312658501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85a5b22317d64f438e843501ef0f4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 418541994}
+  id: 1
+  moveSpeed: 5
+  ballPos: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1104,23 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1753108008954985794, guid: 64b6e2b8af0d8694a9b0befa0e01c45e, type: 3}
   m_PrefabInstance: {fileID: 1753108009570523025}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1576053460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394287595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85a5b22317d64f438e843501ef0f4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 1576053459}
+  id: 3
+  moveSpeed: 5
+  ballPos: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &1603864703
 GameObject:
   m_ObjectHideFlags: 0
