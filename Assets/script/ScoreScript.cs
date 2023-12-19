@@ -11,5 +11,5 @@ public class ScoreScript : MonoBehaviour
     {
         text.text = value.ToString();
     }
-
+ //dwtta är för få score texten ät ändra på sig  
 }

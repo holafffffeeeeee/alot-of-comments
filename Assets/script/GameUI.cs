@@ -5,11 +5,11 @@ using TMPro;
 
 public class GameUI : MonoBehaviour
 {
-    public TextMeshProUGUI volumeValueText;
-    public TextMeshProUGUI playModeButtonText;
-    public TextMeshProUGUI menuObject;
+    public TextMeshProUGUI volumeValueText;  // refrence till volume text
+    public TextMeshProUGUI playModeButtonText; // refrence till swich playmode button 
+    public TextMeshProUGUI menuObject; // refrence till nånting 
 
-    public System.Action onStartGame;
+    public System.Action onStartGame; // när spelet börja gör allt detta I think
 
     private void Start()
     {
@@ -26,14 +26,14 @@ public class GameUI : MonoBehaviour
         GameManager.instance.SwitchPlayMode();
         AdjustPlayModeButtonText();
         }
-
+    //exit button
     public void OnQuitButtonClicked()
     {
         Debug.Log("quit");
         Application.Quit();
     }
 
-
+    // byta mellan player ve player ock player vs ai text
     private void AdjustPlayModeButtonText()
     {
             switch (GameManager.instance.playMode) 

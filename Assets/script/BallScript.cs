@@ -6,14 +6,15 @@ using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class BallScript : MonoBehaviour
 {
-    public GameManager gameManager;
-    public Rigidbody2D rb2d;
-    public float maxInitialAngle = 0.67f;
-    public float moveSpeed = 10f;
-    public float maxStartY = 4f;
-    private float startX = 0f;
-    private float speedMultiplier = 1.1f;
+    public GameManager gameManager;  // refrence till gamemanager
+    public Rigidbody2D rb2d; // rigid body 2D
+    public float maxInitialAngle = 0.67f; // vilken angle den ska sjuta sig 
+    public float moveSpeed = 10f; //move speed = hur snapt bollen går
+    public float maxStartY = 4f;// hur högt den ska skuta ifrån
+    private float startX = 0f; //  den börja ifron
+    private float speedMultiplier = 1.1f;// den går smabbare när den träffa borden
 
+    // börja med att få en knuff ock när gör mål so resettas den
     public void Start()
     {
         InitialPush();
@@ -60,6 +61,7 @@ public class BallScript : MonoBehaviour
        PowerupScript powerup = collision.GetComponent<PowerupScript>();
         if ()
     }*/
+   // när den träffa bordet så gå den snabare ock snabare
     private void OnCollisionEnter2D(Collision2D collision)
     {
         BordScript bord = collision.collider.GetComponent<BordScript>();

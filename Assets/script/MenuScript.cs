@@ -6,16 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    public GameManager gameManager;
-    public GameObject Canvas;
-    public GameObject Back;
-    public GameObject backgroundnyan;
-    public GameObject Back2;
-
+    public GameManager gameManager;   // refrence till gamemanager
+    public GameObject Canvas; // refrence till canvas
+    public GameObject Back;  // refrence till back button
+    public GameObject backgroundnyan; // refrence till  bilden
+    public GameObject Back2; // refrence till back button 2
+    // för att byta scen till spelet
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+     // settings menyn och stuff
     public void Settings()
     {
         if (Application.isPlaying)
@@ -26,6 +27,7 @@ public class MenuScript : MonoBehaviour
         }
 
     }
+    // credits menyn
     public void Credits()
     { 
         if (Application.isPlaying) 
@@ -34,17 +36,20 @@ public class MenuScript : MonoBehaviour
            Back2.SetActive(true);
         } 
     }
+    // back button menyn
     public void BackButton()
     {
         Canvas.SetActive(true);
         Back.SetActive(false);
         backgroundnyan.SetActive(false);
     }
+    //back button 2 knapp typ
    public void back2()
     { 
         Canvas.SetActive(true);
         Back2.SetActive(false);
     }
+    // tutorial
     public void OpenURL(string link)
     {
         

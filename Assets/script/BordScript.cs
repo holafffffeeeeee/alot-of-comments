@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class BordScript : MonoBehaviour
 {
-    public Rigidbody2D rb2d;
-    public float id;
-    public float moveSpeed = 5.0f;
-    public Transform ballPos;
-    public GameManager gameManager;
+    public Rigidbody2D rb2d; //rigidbody rb2d = rigidbody2D
+    public float id; //id ska vara så om bordet har id 2 ska playerVSplayer
+    public float moveSpeed = 5.0f; //hur snappt den går  
+    public Transform ballPos; // den spåra vart bollen är ock flyta dit
+    public GameManager gameManager; // reference till gamemanager
 
-   
+   // AI använder id 3 för att röra på sig
+   // detta är också  styr hjulet så om man ändra här du ändra AI 
 
     public void Update()
     {
@@ -20,12 +21,12 @@ public class BordScript : MonoBehaviour
         {
             MoveAI();
         }
-        else if (id == 2)
+       /* else if (id == 2)
          {
            Input.GetAxis("movePlayer2");
             float movement = ProcessInput();
             Move(movement);
-        }
+        }*/
         else
         {
             float movement = ProcessInput();
@@ -40,6 +41,7 @@ public class BordScript : MonoBehaviour
         bool isPlayer2Ai = !bord1() && GameManager.instance.IsPlayer2Ai();
         return  isPlayer2Ai;
     }*/
+   // den gör så den tracka bollen posititon ock flyta sig dit 
     private void MoveAI()
     {
       
@@ -53,7 +55,7 @@ public class BordScript : MonoBehaviour
         return isPlayer2Ai() ? Input.GetAxis(MovePlayer1InputName) : Input.GetAxis(MovePlayer2InputName);
     }*/
 
-
+    // här försökte jag får en input från spelaren genom att ge det ett id för varje case s
     private float ProcessInput()
     {
         float movement = 0f;
@@ -87,6 +89,7 @@ public class BordScript : MonoBehaviour
         if (dir <= moveSpeed) ;
     }
        */
+  // detta är gas / mortorn så den converta vecotor 2 till movement speed 
    private void Move(float movement)
     {
 
